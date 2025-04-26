@@ -29,11 +29,11 @@ const FloatingContact = () => {
               </div>
               <div>
                 <p className="font-medium">Call Us</p>
-                <p className="text-sm text-gray-600">+1 (234) 567-8900</p>
+                <p className="text-sm text-gray-600">+91 9818996967</p>
               </div>
             </a>
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/9818996967"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-3 p-2 hover:bg-swasthya-blue-light rounded-md transition-colors"

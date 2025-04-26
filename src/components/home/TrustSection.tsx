@@ -51,7 +51,7 @@ const TrustSection = () => {
           />
         </div>
 
-        <div className="mt-16 bg-gray-50 rounded-xl p-8 shadow-sm">
+        {/* <div className="mt-16 bg-gray-50 rounded-xl p-8 shadow-sm">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 md:space-x-8">
             <div className="flex-1">
               <h3 className="text-2xl font-semibold mb-3">Certified Excellence</h3>
@@ -78,7 +78,7 @@ const TrustSection = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
