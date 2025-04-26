@@ -73,7 +73,7 @@ const Contact = () => {
                   <Clock className="text-white h-5 w-5" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Hours</h3>
-                <p className="text-gray-700">Mon-Sun: 9AM-6PM</p>
+                <p className="text-gray-700">Mon-Sun: 9AM-8PM</p>
                 {/* <p className="text-gray-700">Sat: 10AM-4PM</p>
                 <p className="text-gray-700">Sun: Closed</p> */}
               </div>
@@ -156,7 +156,7 @@ const Contact = () => {
                 </form>
               </div>
 
-              <div>
+              {/* <div>
                 <h2 className="text-3xl font-bold mb-6">Our Location</h2>
                 <p className="text-gray-700 mb-8">
                   Conveniently located in the heart of the city with ample parking and public transportation access.
@@ -185,7 +185,7 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

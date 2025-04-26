@@ -140,13 +140,13 @@ const About: React.FC = () => {
               </div>
             </div>
 
-            <div className="text-center mt-12">
+            {/* <div className="text-center mt-12">
               <Link href="/team">
                 <Button className="btn-primary">
                   View Full Team <ArrowRight size={16} className="ml-2" />
                 </Button>
               </Link>
-            </div>
+            </div> */}
           </div>
         </section>
 

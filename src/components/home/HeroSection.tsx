@@ -4,6 +4,8 @@ import React from "react";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import swasthya from "@/utils/images/swasthya.png"
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
@@ -50,11 +52,14 @@ const HeroSection = () => {
           <div className="order-1 lg:order-2 flex justify-center">
             <div className="relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-swasthya-blue to-green-400 rounded-2xl blur opacity-30"></div>
-              <img
-                src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGV5ZSUyMGRvY3RvcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60"
-                alt="Eye examination"
-                className="relative rounded-2xl shadow-2xl w-full max-w-md object-cover h-80 md:h-96"
-              />
+              <Image
+  src={swasthya}
+  alt="Eye examination"
+  className="relative rounded-2xl shadow-2xl w-full max-w-md object-cover h-80 md:h-96"
+  // You might need to add width and height
+  width={400}
+  height={400}
+/>
             </div>
           </div>
         </div>
