@@ -7,7 +7,7 @@ import ServicesSection from "@/components/home/ServicesSection";
 import DoctorsSection from "@/components/home/DoctorsSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import ProcessSection from "@/components/home/ProcessSection";
-import CtaSection from "@/components/home/CtaSection";
+import CtaSection from "@/components/home/CTASection";
 import FaqSection from "@/components/home/FaqSection";
 import WhatsAppFloat from "@/components/layout/WhatsAppFloat";
 import DoctorVideosSection from "@/components/home/DoctorVideosSection";
