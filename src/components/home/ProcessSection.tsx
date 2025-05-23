@@ -20,15 +20,11 @@ const ProcessStep = ({ number, title, description, iconPath }: ProcessStepProps)
       </div>
       <div>
         <div className="flex items-center mb-2">
-          <Image src={iconPath} alt={`${title} icon`} width={24} height={24} className="mr-2" />
+          {/* <Image src={iconPath} alt={`${title} icon`} width={24} height={24} className="mr-2" /> */}
           <h3 className="font-semibold text-lg text-medical-dark">{title}</h3>
         </div>
         <p className="text-gray-600">{description}</p>
       </div>
-
-      {!isMobile && number < 4 && (
-        <div className="hidden md:block absolute top-8 left-4 w-0.5 h-16 bg-gray-200"></div>
-      )}
     </div>
   );
 };
