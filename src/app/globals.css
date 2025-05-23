@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,87 +6,199 @@
 
 @layer base {
   :root {
-    --background: 195 50% 98%;
-    --foreground: 220 14% 20%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 14% 20%;
+    --card-foreground: 222.2 84% 4.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 14% 20%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 197 85% 49%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 201 100% 36%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 100 60% 95%;
-    --secondary-foreground: 220 14% 20%;
+    --secondary: 199 100% 42%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 210 20% 97%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 100 60% 95%;
-    --accent-foreground: 220 14% 20%;
+    --accent: 199 78% 59%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 220 13% 90%;
-    --input: 220 13% 90%;
-    --ring: 197 85% 49%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
-  }
-}
 
-@layer base {
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
   * {
     @apply border-border;
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
-
   body {
     @apply bg-background text-foreground font-sans;
-    -webkit-font-smoothing: antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight;
+    @apply font-display;
   }
 
-  h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
+  .font-display {
+    font-family: 'Montserrat', sans-serif;
   }
 
-  h2 {
-    @apply text-2xl md:text-3xl lg:text-4xl;
+  /* Utility styles */
+  .content-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  h3 {
-    @apply text-xl md:text-2xl lg:text-3xl;
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold text-medical-dark mb-6 font-display;
   }
-}
 
-@layer components {
-  .container-custom {
-    @apply container mx-auto px-4 md:px-8;
+  .sub-heading {
+    @apply text-xl md:text-2xl font-semibold text-medical-primary mb-4 font-display;
+  }
+
+  .paragraph {
+    @apply text-base leading-relaxed text-gray-700 mb-4;
   }
 
   .btn-primary {
-    @apply bg-swasthya-blue text-white font-medium rounded-md px-6 py-3 shadow-md hover:bg-swasthya-blue-dark transition-all duration-200 focus:ring-2 focus:ring-swasthya-blue focus:ring-opacity-50;
+    @apply bg-medical-primary hover:bg-medical-dark text-white font-medium py-2 px-6 rounded-md transition duration-300 inline-flex items-center justify-center;
   }
 
   .btn-secondary {
-    @apply bg-white text-swasthya-blue border border-swasthya-blue font-medium rounded-md px-6 py-3 hover:bg-swasthya-blue-light transition-all duration-200 focus:ring-2 focus:ring-swasthya-blue focus:ring-opacity-50;
+    @apply bg-white border-2 border-medical-primary text-medical-primary hover:bg-medical-light font-medium py-2 px-6 rounded-md transition duration-300 inline-flex items-center justify-center;
   }
 
-  .section-padding {
-    @apply py-12 md:py-16 lg:py-20;
+  .btn-whatsapp {
+    @apply bg-[#25D366] hover:bg-[#128C7E] text-white font-medium py-2 px-6 rounded-md transition duration-300 inline-flex items-center justify-center;
   }
 
   .card-shadow {
     @apply shadow-lg hover:shadow-xl transition-shadow duration-300;
   }
+
+  .form-input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-medical-primary;
+  }
+}
+
+/* Additional components and layout classes */
+.specialty-card {
+  @apply bg-white rounded-lg p-6 transition-all duration-300 card-shadow border border-gray-100;
+}
+
+.specialty-card:hover {
+  @apply border-medical-accent;
+}
+
+.testimonial-card {
+  @apply bg-white rounded-lg p-6 transition-all duration-300 shadow-md hover:shadow-lg border-l-4 border-medical-primary;
+}
+
+.doctor-card {
+  @apply bg-white rounded-lg overflow-hidden transition-all duration-300 card-shadow border border-gray-100;
+}
+
+.doctor-card:hover {
+  @apply border-medical-secondary;
+}
+
+.faq-item {
+  @apply border-b border-gray-200 py-4;
+}
+
+.blog-card {
+  @apply bg-white rounded-lg overflow-hidden transition-all duration-300 card-shadow border border-gray-100;
+}
+
+.blog-card:hover {
+  @apply border-medical-accent;
+}
+
+.procedure-step {
+  @apply flex items-start gap-4 mb-6;
+}
+
+.step-number {
+  @apply bg-medical-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0;
+}
+
+.info-table {
+  @apply w-full border-collapse;
+}
+
+.info-table th {
+  @apply bg-medical-light text-medical-dark py-3 px-4 text-left font-semibold;
+}
+
+.info-table td {
+  @apply py-3 px-4 border-t border-gray-200;
+}
+
+.rating-stars {
+  @apply flex text-yellow-400;
+}
+
+.breadcrumbs {
+  @apply flex flex-wrap items-center text-sm text-gray-500 py-2;
+}
+
+.breadcrumbs > span {
+  @apply mx-1;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  @apply outline-none ring-2 ring-offset-2 ring-medical-primary;
 }

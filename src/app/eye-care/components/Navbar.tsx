@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container-custom flex justify-between items-center py-4">
         <Link href="/" className="flex items-center space-x-2">
-          <span className="text-swasthya-blue text-xl font-bold">Swasthya Health</span>
+          <span className="text-swasthya-blue text-xl font-bold inline-block">Swasthya Health</span>
         </Link>
 
         {/* Desktop Menu */}
