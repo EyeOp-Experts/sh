@@ -91,12 +91,12 @@ const DoctorCard = ({ doctor }: { doctor: DoctorProps }) => {
             <Calendar className="w-4 h-4 mr-1" />
             Book Now
           </Button>
-          <Link
+          {/* <Link
             href={doctor.path}
             className="flex-1 bg-medical-primary hover:bg-medical-dark text-white font-medium py-2 px-4 rounded-md transition-colors flex items-center justify-center"
           >
             View Profile
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

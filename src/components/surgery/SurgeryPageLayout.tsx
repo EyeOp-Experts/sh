@@ -140,13 +140,11 @@ const SurgeryPageLayout = ({
               <h3 className="text-lg font-semibold text-medical-dark mb-4">Related Specialties</h3>
               <ul className="space-y-3">
                 {filteredRelatedSpecialties.slice(0, 4).map((specialty, index) => (
-                  <li key={index}>
-                    <Link href={specialty.path} legacyBehavior>
-                      <a className="text-medical-primary hover:underline block py-1">
-                        {specialty.name}
-                      </a>
-                    </Link>
-                  </li>
+                 <li key={index}>
+                 <Link href={specialty.path} className="text-medical-primary hover:underline block py-1">
+                   {specialty.name}
+                 </Link>
+               </li>               
                 ))}
                 <li>
                   <Link href="/specialties" legacyBehavior>

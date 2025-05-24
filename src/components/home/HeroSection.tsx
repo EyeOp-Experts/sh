@@ -87,7 +87,7 @@ const HeroSection = () => {
               { value: "5000+", label: "Successful Surgeries" },
               { value: "50+", label: "Expert Surgeons" },
               { value: "15+", label: "Specialty Areas" },
-              { value: "98%", label: "Patient Satisfaction" }
+              { value: "1000+", label: "Satisfied Customer" }
             ].map((item) => (
               <div key={item.label} className="text-center">
                 <div className="text-4xl font-bold text-medical-primary mb-2">{item.value}</div>

@@ -110,12 +110,12 @@ const DoctorCard = ({ doctor }: { doctor: DoctorProps }) => {
     <Calendar className="w-4 h-4 mr-1" />
     Book Now
   </Button>
-  <Link
+  {/* <Link
     href={doctor.path}
     className="flex-1 bg-medical-primary hover:bg-medical-dark text-white font-medium py-2 px-4 rounded-md transition-colors flex items-center justify-center"
   >
     View Profile
-  </Link>
+  </Link> */}
 </div>
 
       </div>
@@ -149,7 +149,7 @@ const Doctors = () => {
             </div>
 
             <div className="flex flex-col md:flex-row gap-4 mb-10 justify-between">
-              <div className="relative flex-grow max-w-md">
+              {/* <div className="relative flex-grow max-w-md">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <Search className="h-5 w-5 text-gray-400" />
                 </div>
@@ -160,7 +160,7 @@ const Doctors = () => {
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
-              </div>
+              </div> */}
 
               <div className="flex gap-2 flex-wrap">
                 {specialties.map((specialty) => (
