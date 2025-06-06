@@ -15,9 +15,7 @@ const CancerSurgeries = () => {
     description:
       "Our oncology department provides comprehensive surgical solutions for various types of cancer. With a focus on precision, minimal invasiveness, and patient comfort, we aim to deliver the highest standards of cancer care.",
     image:
-      "https://images.unsplash.com/photo-1579165466741-7f35e4755169?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-    recoveryTime: "2-12 weeks (varies by cancer type)",
-    costRange: "₹50,000 - ₹3,50,000",
+      "/assets/icons/cancer.jpg",
     eligibility: "Based on cancer stage and patient condition",
     recommended: false,
   };
@@ -27,33 +25,21 @@ const CancerSurgeries = () => {
       name: "Breast Cancer Surgery",
       description:
         "Procedures include lumpectomy, mastectomy, and breast reconstruction tailored to the patient's specific condition and needs.",
-      duration: "1-4 hours",
-      recovery: "2-6 weeks",
-      cost: "₹60,000 - ₹2,00,000",
     },
     {
       name: "Colorectal Cancer Surgery",
       description:
         "Surgical removal of cancerous portions of the colon or rectum, often performed with minimally invasive techniques.",
-      duration: "2-4 hours",
-      recovery: "4-8 weeks",
-      cost: "₹70,000 - ₹2,50,000",
     },
     {
       name: "Head & Neck Cancer Surgery",
       description:
         "Complex procedures to remove cancerous tissues while preserving function and appearance whenever possible.",
-      duration: "3-8 hours",
-      recovery: "4-12 weeks",
-      cost: "₹90,000 - ₹3,50,000",
     },
     {
       name: "Thyroid Cancer Surgery",
       description:
         "Partial or complete removal of the thyroid gland with careful preservation of surrounding structures.",
-      duration: "2-3 hours",
-      recovery: "1-2 weeks",
-      cost: "₹50,000 - ₹1,50,000",
     },
   ];
 
@@ -88,7 +74,6 @@ const CancerSurgeries = () => {
         breadcrumbItems={breadcrumbItems}
         surgeryData={surgeryData}
       >
-        {/* Procedures Section */}
         <div className="bg-white rounded-lg shadow-md p-6 mb-6">
           <h2 className="text-xl font-bold text-medical-dark mb-4">
             Available Procedures
@@ -103,32 +88,11 @@ const CancerSurgeries = () => {
                   {procedure.name}
                 </h3>
                 <p className="text-gray-600 mb-3">{procedure.description}</p>
-                <div className="grid grid-cols-3 gap-2 text-sm">
-                  <div>
-                    <span className="font-medium text-medical-dark">
-                      Duration:
-                    </span>{" "}
-                    {procedure.duration}
-                  </div>
-                  <div>
-                    <span className="font-medium text-medical-dark">
-                      Recovery:
-                    </span>{" "}
-                    {procedure.recovery}
-                  </div>
-                  <div>
-                    <span className="font-medium text-medical-dark">
-                      Cost:
-                    </span>{" "}
-                    {procedure.cost}
-                  </div>
-                </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* FAQ Section */}
         <div className="bg-white rounded-lg shadow-md p-6">
           <h2 className="text-xl font-bold text-medical-dark mb-4">
             Frequently Asked Questions

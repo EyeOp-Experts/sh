@@ -14,20 +14,22 @@ const ProcessStep = ({ number, title, description, iconPath }: ProcessStepProps)
   const isMobile = useIsMobile();
 
   return (
-    <div className="relative process-step">
-      <div className={`step-number ${number % 2 === 0 ? 'bg-medical-secondary' : 'bg-medical-primary'}`}>
-        {number}
-      </div>
-      <div>
-        <div className="flex items-center mb-2">
-          {/* <Image src={iconPath} alt={`${title} icon`} width={24} height={24} className="mr-2" /> */}
-          <h3 className="font-semibold text-lg text-medical-dark">{title}</h3>
+    <div className="relative process-step mb-8">
+      <div className="flex items-start gap-3">
+        {/* Optional icon */}
+        {/* <Image src={iconPath} alt={`${title} icon`} width={24} height={24} /> */}
+
+        <div>
+          <h3 className="font-semibold text-lg text-medical-dark">
+            {number}. {title}
+          </h3>
+          <p className="text-gray-600 mt-1">{description}</p>
         </div>
-        <p className="text-gray-600">{description}</p>
       </div>
     </div>
   );
 };
+
 
 const ProcessSection = () => {
   const steps = [

@@ -1,12 +1,11 @@
 "use client";
 
-import { MessageCircle } from "lucide-react";
-
+import { FaWhatsapp } from "react-icons/fa";
 const WhatsAppFloat = () => {
   const handleClick = () => {
     if (typeof window !== "undefined") {
       // WhatsApp number and pre-filled message
-      const phone = "+919876543210";
+      const phone = "9818996967";
       const message = "I'd like to schedule a consultation for surgery.";
 
       // Create WhatsApp URL
@@ -33,7 +32,7 @@ const WhatsAppFloat = () => {
       <div className="relative">
         <div className="animate-pulse-slow absolute -inset-1.5 bg-[#25D366] opacity-40 rounded-full"></div>
         <div className="relative bg-[#25D366] text-white p-3.5 rounded-full shadow-lg flex items-center justify-center">
-          <MessageCircle className="w-6 h-6" />
+          <FaWhatsapp className="w-6 h-6" />
         </div>
       </div>
     </div>

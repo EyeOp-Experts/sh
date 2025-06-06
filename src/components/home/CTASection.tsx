@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
 import WhatsAppButton from "@/components/ui/button-whatsapp";
+import CallButton from "@/components/ui/CallButton";
 
 const CtaSection = () => {
   return (
@@ -16,22 +16,22 @@ const CtaSection = () => {
 
       <div className="content-container relative z-10">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready for Better Health with Swasthya?</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            Ready for Better Health with Swasthya?
+          </h2>
           <p className="text-lg opacity-90 mb-10 max-w-2xl mx-auto">
-            Our expert surgeons at Swasthya Health are ready to provide personalized consultations and 
+            Our expert surgeons at Swasthya Health are ready to provide personalized consultations and
             guide you through your treatment options for a healthier tomorrow.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-lg mx-auto">
-            <Button 
-              className="bg-white text-medical-primary hover:bg-medical-light flex items-center justify-center py-7 rounded-xl text-lg font-medium shadow-lg hover:shadow-xl transition-all"
-            >
-              <Calendar className="w-6 h-6 mr-3" />
-              Book Appointment
-            </Button>
+            <CallButton
+              label="Call Now"
+              className="w-full py-7 h-10 font-medium rounded-xl shadow-lg hover:shadow-xl transition-all justify-center"
+            />
 
-            <WhatsAppButton 
-              text="Chat with Specialist" 
+            <WhatsAppButton
+              text="Chat with Specialist"
               message="I'd like to book a surgical consultation with Swasthya Health"
               className="py-7 text-lg font-medium rounded-xl shadow-lg hover:shadow-xl transition-all"
               fullWidth
@@ -39,7 +39,11 @@ const CtaSection = () => {
           </div>
 
           <p className="mt-8 text-sm opacity-80">
-            Or visit our <Link href="/contact" className="underline hover:text-white transition-colors">contact page</Link> to fill out our consultation form
+            Or visit our{" "}
+            <Link href="/contact" className="underline hover:text-white transition-colors">
+              contact page
+            </Link>{" "}
+            to fill out our consultation form
           </p>
         </div>
       </div>

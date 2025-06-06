@@ -4,11 +4,13 @@ import Link from "next/link";
 import { Phone, Calendar, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import WhatsAppButton from "@/components/ui/button-whatsapp";
+import CallButton from "@/components/ui/CallButton"
 import Logo from "@/components/ui/logo";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-br from-medical-light via-white to-medical-light py-20 md:py-24">
+    <section className="flex-1 flex items-center bg-gradient-to-br from-medical-light via-white to-medical-light py-12 md:py-16">
+
       <div className="content-container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* LEFT SIDE TEXT */}
@@ -22,17 +24,14 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-lg text-gray-700 mb-8 max-w-lg mx-auto md:mx-0">
-              At Swasthya Health, we connect you with top surgeons across multiple specialties, 
+              At Swasthya Health, we connect you with top surgeons across multiple specialties,
               ensuring quality healthcare that fits your budget and prioritizes your wellness journey.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button className="btn-primary text-base py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all">
-                <Calendar className="w-5 h-5 mr-2" />
-                Schedule Consultation
-              </Button>
+              <CallButton label="Call Now" />
 
-              <WhatsAppButton 
+              <WhatsAppButton
                 text="Get Instant Help"
                 className="py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all"
               />
@@ -54,10 +53,10 @@ const HeroSection = () => {
           {/* RIGHT SIDE IMAGE */}
           <div className="relative">
             <div className="relative z-10 bg-white p-3 rounded-2xl shadow-2xl transform hover:scale-[1.01] transition-all">
-              <img 
-                src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2342&q=80" 
+              <img
+                src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2342&q=80"
                 alt="Doctor consulting with patient"
-                className="w-full h-auto rounded-xl object-cover"
+                className="w-full h-5/10 rounded-xl object-cover"
               />
               <div className="absolute bottom-8 right-8 bg-white p-4 rounded-xl shadow-lg">
                 <div className="flex items-center gap-3">
@@ -66,7 +65,7 @@ const HeroSection = () => {
                   </div>
                   <div>
                     <p className="text-xs text-gray-500">Need help? Call us</p>
-                    <p className="text-medical-dark font-bold">+91-9876543210</p>
+                    <p className="text-medical-dark font-bold">+91 9818996967</p>
                   </div>
                 </div>
               </div>

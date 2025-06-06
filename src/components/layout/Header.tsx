@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 import WhatsAppButton from "@/components/ui/button-whatsapp";
 import Logo from "@/components/ui/logo";
+import CallButton from "@/components/ui/CallButton";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +15,6 @@ const Header = () => {
   };
 
   const specialties = [
-    // { name: "Gynaecology", path: "/specialties/gynaecology" },
     { name: "Cancer Surgeries", path: "/specialties/cancer-surgeries" },
     { name: "Eye Surgeries", path: "/specialties/eye-surgeries" },
     { name: "Ortho", path: "/specialties/ortho" },
@@ -25,7 +24,6 @@ const Header = () => {
     { name: "Gastro", path: "/specialties/gastro" },
     { name: "Dental", path: "/specialties/dental" },
     { name: "Abdominal Surgeries", path: "/specialties/abdominal-surgeries" },
-    // { name: "Neurosurgeries", path: "/specialties/neurosurgeries" },
   ];
 
   return (
@@ -79,12 +77,10 @@ const Header = () => {
             </Link>
           </nav>
 
-          {/* Contact Buttons */}
+          {/* Contact Buttons - Desktop */}
           <div className="hidden md:flex items-center space-x-3">
-            <Button size="sm" className="btn-primary">
-              <Phone className="w-4 h-4 mr-1" /> Call Now
-            </Button>
-            <WhatsAppButton size="sm" text="WhatsApp" className="text-white" />
+            <CallButton label="Call Now" className="w-36 h-10" />
+            <WhatsAppButton size="sm" text="WhatsApp" className="w-36 h-10 text-white" />
           </div>
 
           {/* Mobile Menu Button */}
@@ -144,11 +140,10 @@ const Header = () => {
                 Contact
               </Link>
 
+              {/* Mobile Buttons */}
               <div className="flex flex-col space-y-2 pt-3">
-                <Button size="sm" className="btn-primary w-full">
-                  <Phone className="w-4 h-4 mr-1" /> Call Now
-                </Button>
-                <WhatsAppButton size="sm" text="WhatsApp" className="w-full text-white" fullWidth />
+                <CallButton label="Call Now" className="w-full h-10" />
+                <WhatsAppButton size="sm" text="WhatsApp" className="w-full h-10 text-white" fullWidth />
               </div>
             </nav>
           </div>

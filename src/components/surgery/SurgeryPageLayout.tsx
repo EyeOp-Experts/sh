@@ -12,8 +12,6 @@ interface SurgeryOverview {
   title: string;
   description: string;
   image: string;
-  recoveryTime: string;
-  costRange: string;
   eligibility: string;
   recommended: boolean;
 }
@@ -78,20 +76,7 @@ const SurgeryPageLayout = ({
                 </div>
               )}
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                <div className="bg-gray-50 p-3 rounded-md">
-                  <h3 className="text-sm font-medium text-gray-500">Recovery Time</h3>
-                  <p className="text-medical-dark font-medium">{surgeryData.recoveryTime}</p>
-                </div>
-                <div className="bg-gray-50 p-3 rounded-md">
-                  <h3 className="text-sm font-medium text-gray-500">Cost Range</h3>
-                  <p className="text-medical-dark font-medium">{surgeryData.costRange}</p>
-                </div>
-                <div className="bg-gray-50 p-3 rounded-md">
-                  <h3 className="text-sm font-medium text-gray-500">Eligibility</h3>
-                  <p className="text-medical-dark font-medium">{surgeryData.eligibility}</p>
-                </div>
-              </div>
+             
               
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button className="btn-primary">
@@ -156,7 +141,7 @@ const SurgeryPageLayout = ({
               </ul>
             </div>
             
-            {/* Success Rate */}
+            {/* Success Rate
             <div className="bg-white rounded-lg shadow-sm p-6">
               <h3 className="text-lg font-semibold text-medical-dark mb-3">Success Rate</h3>
               <div className="flex items-center">
@@ -172,7 +157,7 @@ const SurgeryPageLayout = ({
               <p className="text-sm text-gray-600 mt-2">
                 Based on our hospital's data from the last 500 procedures
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

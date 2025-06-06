@@ -19,9 +19,7 @@ export default function OrthoPage() {  const breadcrumbItems: BreadcrumbItem[] =
   const surgeryData = {
     title: "Orthopedic Surgeries",
     description: "Our orthopedic department offers comprehensive surgical solutions for bone and joint problems. From knee replacements to arthroscopic procedures, we ensure optimal mobility and pain relief with minimal recovery time.",
-    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-    recoveryTime: "1-12 weeks (varies by procedure)",
-    costRange: "₹40,000 - ₹3,00,000",
+    image:  "/assets/icons/ortho.jpg",
     eligibility: "Case-by-case assessment",
     recommended: false
   };
@@ -40,46 +38,23 @@ export default function OrthoPage() {  const breadcrumbItems: BreadcrumbItem[] =
               {
                 name: "Knee Replacement",
                 description: "Total or partial knee replacement surgery to relieve pain and restore function in damaged knee joints.",
-                duration: "1-2 hours",
-                recovery: "4-6 weeks",
-                cost: "₹80,000 - ₹2,50,000"
               },
               {
                 name: "Hip Replacement",
                 description: "Procedure to replace worn-out hip joints with prosthetic implants to improve mobility and reduce pain.",
-                duration: "1-2 hours",
-                recovery: "4-8 weeks",
-                cost: "₹90,000 - ₹3,00,000"
               },
               {
                 name: "Arthroscopy",
                 description: "Minimally invasive procedure to diagnose and treat joint problems using a tiny camera and specialized instruments.",
-                duration: "30-60 minutes",
-                recovery: "1-3 weeks",
-                cost: "₹40,000 - ₹80,000"
               },
               {
                 name: "Sports Injury Treatment",
                 description: "Specialized procedures for ACL reconstruction, meniscus repair, and other sports-related injuries.",
-                duration: "1-3 hours",
-                recovery: "6-12 weeks",
-                cost: "₹50,000 - ₹1,50,000"
               }
             ].map((procedure, index) => (
               <div key={index} className="border border-gray-100 rounded-lg p-4 shadow-sm">
                 <h3 className="text-lg font-semibold text-medical-dark">{procedure.name}</h3>
                 <p className="text-gray-600 mb-3">{procedure.description}</p>
-                <div className="grid grid-cols-3 gap-2 text-sm">
-                  <div>
-                    <span className="font-medium text-medical-dark">Duration:</span> {procedure.duration}
-                  </div>
-                  <div>
-                    <span className="font-medium text-medical-dark">Recovery:</span> {procedure.recovery}
-                  </div>
-                  <div>
-                    <span className="font-medium text-medical-dark">Cost:</span> {procedure.cost}
-                  </div>
-                </div>
               </div>
             ))}
           </div>

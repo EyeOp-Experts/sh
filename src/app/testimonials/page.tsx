@@ -160,7 +160,7 @@ const Testimonials = () => {
                 ))}
               </div>
 
-              <div className="mt-16 bg-medical-light bg-opacity-30 p-8 rounded-2xl">
+              {/* <div className="mt-16 bg-medical-light bg-opacity-30 p-8 rounded-2xl">
                 <div className="max-w-3xl mx-auto text-center">
                   <h2 className="text-2xl font-bold text-medical-dark mb-6">Share Your Experience</h2>
                   <p className="text-gray-700 mb-6">
@@ -171,7 +171,7 @@ const Testimonials = () => {
                     Submit Your Testimonial
                   </Button>
                 </div>
-              </div>
+              </div> */}
             </div>
           </section>
         </main>

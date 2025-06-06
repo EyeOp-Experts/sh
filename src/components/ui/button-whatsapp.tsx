@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
+import { FaWhatsapp } from 'react-icons/fa';
+
 
 interface WhatsAppButtonProps {
   text?: string;
@@ -13,7 +14,7 @@ interface WhatsAppButtonProps {
 
 const WhatsAppButton = ({
   text = "Chat on WhatsApp",
-  phone = "+919876543210",
+  phone = "+91 9818996967",
   message = "I'd like to schedule a consultation with Swasthya Health",
   className = "",
   size = "default",
@@ -39,7 +40,7 @@ const WhatsAppButton = ({
       size={size}
       className={`bg-[#25D366] hover:bg-[#128C7E] text-white font-medium shadow-md hover:shadow-lg ${fullWidth ? 'w-full' : ''} ${className}`}
     >
-      <MessageCircle className="w-5 h-5 mr-2" />
+      <FaWhatsapp className="w-5 h-5 mr-2" />
       {text}
     </Button>
   );
