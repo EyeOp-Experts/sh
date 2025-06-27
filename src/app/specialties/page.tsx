@@ -1,20 +1,23 @@
+
 import React from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFloat from "@/components/layout/WhatsAppFloat";
 import Link from "next/link";
 import { Metadata } from "next";
-import { 
-  Card, 
-  CardContent, 
-  CardDescription, 
-  CardFooter, 
-  CardHeader, 
-  CardTitle 
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle
 } from "@/components/ui/card";
 import { ArrowRight, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import SpecialtyActions from "@/components/SpecialtyActions"
+
 
 export const metadata: Metadata = {
   title: "Medical Specialties | Swasthya Health",
@@ -85,10 +88,10 @@ export default function Specialties() {
               </p>
               <div className="flex items-center bg-white rounded-lg shadow-sm p-2 max-w-lg">
                 <Search className="text-gray-400 ml-2" size={20} />
-                <Input 
-                  type="text" 
-                  placeholder="Search procedures or specialties..." 
-                  className="border-none focus:ring-0 flex-grow" 
+                <Input
+                  type="text"
+                  placeholder="Search procedures or specialties..."
+                  className="border-none focus:ring-0 flex-grow"
                 />
                 <Button size="sm">Search</Button>
               </div>
@@ -102,9 +105,9 @@ export default function Specialties() {
               {specialties.map((specialty) => (
                 <Card key={specialty.id} className="overflow-hidden hover:shadow-md transition-shadow group">
                   <div className="relative h-48 overflow-hidden">
-                    <img 
-                      src={specialty.image} 
-                      alt={specialty.name} 
+                    <img
+                      src={specialty.image}
+                      alt={specialty.name}
                       className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute top-4 right-4 bg-white rounded-full p-2 shadow-md">
@@ -148,7 +151,7 @@ export default function Specialties() {
                 <h3 className="text-lg font-semibold text-medical-dark mb-2">Expert Specialists</h3>
                 <p className="text-gray-600">Access to highly qualified specialists with years of experience in their respective fields.</p>
               </div>
-              
+
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <div className="w-12 h-12 bg-medical-light rounded-full flex items-center justify-center mb-4">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-medical-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -158,7 +161,7 @@ export default function Specialties() {
                 <h3 className="text-lg font-semibold text-medical-dark mb-2">Affordable Care</h3>
                 <p className="text-gray-600">Transparent pricing and cost-effective solutions without compromising on quality of care.</p>
               </div>
-              
+
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <div className="w-12 h-12 bg-medical-light rounded-full flex items-center justify-center mb-4">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-medical-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -182,18 +185,14 @@ export default function Specialties() {
                   Speak with our healthcare advisors who can guide you to the right specialist based on your symptoms and medical history.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Button className="btn-primary">Book a Consultation</Button>
-                <Button variant="outline" className="border-medical-primary text-medical-primary hover:bg-medical-light">
-                  Call Helpline
-                </Button>
-              </div>
+              <SpecialtyActions />
+
             </div>
           </div>
-        </div>
-      </main>
+        </div >
+      </main >
       <Footer />
       <WhatsAppFloat />
-    </div>
+    </div >
   );
 }

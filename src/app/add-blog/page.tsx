@@ -61,7 +61,7 @@ const AddBlogPage = () => {
       });
 
       alert("Blog submitted successfully!");
-      router.push("/blogs");
+      router.push("/blog");
     } catch (err) {
       console.error("Error submitting blog:", err);
       alert("Failed to submit blog.");
