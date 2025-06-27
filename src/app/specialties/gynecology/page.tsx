@@ -14,7 +14,7 @@ const Hysteroscopy = () => {
   const hysteroscopyData = {
     title: "Hysteroscopy Procedure",
     description: "A minimally invasive diagnostic and surgical procedure used to examine the inside of the uterus (womb). During a hysteroscopy, your doctor inserts a hysteroscope through your vagina and cervix into the uterus.",
-    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/assets/icons/gynaecology.jpg",
     recoveryTime: "1-2 days for diagnostic; 2-3 days for surgical",
     costRange: "₹15,000 - ₹40,000",
     eligibility: "Women with abnormal bleeding, fertility issues",

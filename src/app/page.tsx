@@ -15,9 +15,12 @@ import DoctorVideosSection from "@/components/home/DoctorVideosSection";
 const HomePage = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-grow">
+       <div className="flex flex-col min-h-screen">
+        <Header />
         <HeroSection />
+      </div>
+      <main className="flex-grow">
+        
         <ServicesSection />
         <DoctorsSection />
         <DoctorVideosSection />

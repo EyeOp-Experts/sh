@@ -15,9 +15,10 @@ const SpecialtyCard = ({ title, description, iconSrc, path, procedures }: Specia
   return (
     <div className="specialty-card group bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-medical-primary">
       <div className="flex items-center mb-4">
-        <div className="w-12 h-12 rounded-full bg-medical-light flex items-center justify-center mr-3">
-          <img src={iconSrc} alt={title} className="w-6 h-6" />
+        <div className="w-12 h-12 rounded-full overflow-hidden bg-medical-light mr-3">
+          <img src={iconSrc} alt={title} className="w-full h-full object-cover" />
         </div>
+
         <h3 className="text-xl font-semibold text-medical-dark">{title}</h3>
       </div>
       <p className="text-gray-600 mb-4">{description}</p>
@@ -29,11 +30,11 @@ const SpecialtyCard = ({ title, description, iconSrc, path, procedures }: Specia
           </li>
         ))}
       </ul>
-      <Link 
+      <Link
         href={path}
         className="inline-flex items-center text-medical-primary font-medium hover:text-medical-dark transition-colors group"
       >
-        Learn More 
+        Learn More
         <ArrowRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
       </Link>
     </div>
@@ -45,70 +46,70 @@ const ServicesSection = () => {
     {
       title: "Gynaecology",
       description: "Expert treatments for women's health concerns with minimally invasive options.",
-      iconSrc: "/assets/icons/gynaecology.svg",
+      iconSrc: "/assets/icons/gynaecology.jpg",
       path: "/specialties/gynaecology",
       procedures: ["Hysteroscopy", "Laparoscopy", "Fibroid Removal", "Hysterectomy"]
     },
     {
       title: "Cancer Surgeries",
       description: "Advanced surgical treatments for various cancer types with comprehensive care.",
-      iconSrc: "/assets/icons/cancer.svg",
+      iconSrc: "/assets/icons/cancer.jpg",
       path: "/specialties/cancer-surgeries",
       procedures: ["Oral Cancer", "Breast Cancer", "Throat Cancer", "Abdominal Cancer"]
     },
     {
       title: "Eye Surgeries",
       description: "State-of-the-art procedures to restore and improve vision with minimal recovery time.",
-      iconSrc: "/assets/icons/eye.svg",
+      iconSrc: "/assets/icons/eye.jpg",
       path: "/specialties/eye-surgeries",
       procedures: ["Cataract", "Glaucoma", "LASIK", "SMILE"]
     },
     {
       title: "Ortho",
       description: "Comprehensive orthopedic treatments for bone and joint issues for improved mobility.",
-      iconSrc: "/assets/icons/ortho.svg",
+      iconSrc: "/assets/icons/ortho.jpg",
       path: "/specialties/ortho",
       procedures: ["Knee Replacement", "Hip Replacement", "Sports Injuries", "Arthroscopy"]
     },
     {
       title: "Stone Removal",
       description: "Minimally invasive procedures to remove painful stones with quick recovery.",
-      iconSrc: "/assets/icons/kidney.svg",
+      iconSrc: "/assets/icons/stone-removal.jpg",
       path: "/specialties/stone-removal",
       procedures: ["Kidney Stone", "Gall Bladder Stone", "Urinary Stones", "PCNL"]
     },
     {
       title: "Dental",
       description: "Complete dental care solutions from basic treatments to advanced procedures.",
-      iconSrc: "/assets/icons/dental.svg",
+      iconSrc: "/assets/icons/dental.jpg",
       path: "/specialties/dental",
       procedures: ["Implants", "Prosthesis", "Cavity Filling", "Extraction"]
     },
     {
       title: "Liver Surgery",
       description: "Advanced surgical treatments for liver diseases with expert hepatic specialists.",
-      iconSrc: "/assets/icons/kidney.svg",
+      iconSrc: "/assets/icons/liver-surgery.jpg",
       path: "/specialties/liver-surgery",
       procedures: ["Liver Resection", "Transplantation", "Laparoscopic Surgery", "RFA"]
     },
     {
       title: "ENT Surgery",
       description: "Specialized care for ear, nose, and throat conditions with precision techniques.",
-      iconSrc: "/assets/icons/gynaecology.svg",
+      iconSrc: "/assets/icons/ent.jpeg",
       path: "/specialties/ent-surgery",
       procedures: ["Tonsillectomy", "Septoplasty", "Ear Surgery", "Sinus Surgery"]
     },
     {
       title: "Gastroenterology",
       description: "Comprehensive care for digestive system disorders with advanced diagnostics and treatments.",
-      iconSrc: "/assets/icons/kidney.svg",
+      iconSrc: "/assets/icons/liver-surgery.jpg",
       path: "/specialties/gastroenterology",
       procedures: ["Endoscopy", "Colonoscopy", "ERCP", "Hernia Repair"]
     },
     {
       title: "Abdominal Surgery",
       description: "Expert surgical care for conditions affecting abdominal organs and tissues.",
-      iconSrc: "/assets/icons/cancer.svg",
+      iconSrc: "/assets/icons/ent.jpeg",
       path: "/specialties/abdominal-surgery",
       procedures: ["Appendectomy", "Hernia Repair", "Bowel Resection", "Splenectomy"]
     },

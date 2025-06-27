@@ -14,9 +14,7 @@ const surgeryData = {
   description:
     "Our ophthalmology department offers state-of-the-art surgical solutions for various eye conditions. From cataract removal to LASIK vision correction, we help restore and improve your vision with precision and care.",
   image:
-    "https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2274&q=80",
-  recoveryTime: "1-4 weeks (varies by procedure)",
-  costRange: "₹25,000 - ₹1,20,000",
+     "/assets/icons/eye.jpg",
   eligibility: "Adults with stable eye prescription",
   recommended: true,
 };
@@ -34,49 +32,26 @@ export default function EyeSurgeriesPage() {
                 name: "Cataract Surgery",
                 description:
                   "Removal of cloudy lens and replacement with an artificial intraocular lens (IOL) to restore clear vision.",
-                duration: "15-30 minutes",
-                recovery: "1-2 weeks",
-                cost: "₹25,000 - ₹80,000",
               },
               {
                 name: "LASIK",
                 description:
                   "Laser-assisted procedure to reshape the cornea and correct refractive errors like myopia, hyperopia, and astigmatism.",
-                duration: "10-15 minutes per eye",
-                recovery: "24-48 hours",
-                cost: "₹30,000 - ₹1,00,000",
               },
               {
                 name: "Glaucoma Surgery",
                 description:
                   "Procedures to reduce intraocular pressure and prevent further damage to the optic nerve.",
-                duration: "30-60 minutes",
-                recovery: "2-4 weeks",
-                cost: "₹35,000 - ₹90,000",
               },
               {
                 name: "Retinal Detachment Repair",
                 description:
                   "Surgical procedures to reattach the retina and restore vision affected by retinal detachment.",
-                duration: "1-2 hours",
-                recovery: "2-6 weeks",
-                cost: "₹45,000 - ₹1,20,000",
               },
             ].map((procedure, index) => (
               <div key={index} className="border border-gray-100 rounded-lg p-4 shadow-sm">
                 <h3 className="text-lg font-semibold text-medical-dark">{procedure.name}</h3>
                 <p className="text-gray-600 mb-3">{procedure.description}</p>
-                <div className="grid grid-cols-3 gap-2 text-sm">
-                  <div>
-                    <span className="font-medium text-medical-dark">Duration:</span> {procedure.duration}
-                  </div>
-                  <div>
-                    <span className="font-medium text-medical-dark">Recovery:</span> {procedure.recovery}
-                  </div>
-                  <div>
-                    <span className="font-medium text-medical-dark">Cost:</span> {procedure.cost}
-                  </div>
-                </div>
               </div>
             ))}
           </div>

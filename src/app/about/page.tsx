@@ -4,9 +4,8 @@ import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFloat from "@/components/layout/WhatsAppFloat";
-import { Button } from "@/components/ui/button";
 import WhatsAppButton from "@/components/ui/button-whatsapp";
-import { Phone, MapPin, Mail, Clock } from "lucide-react";
+import CallButton from "@/components/ui/CallButton";
 
 const About = () => {
   return (
@@ -28,10 +27,11 @@ const About = () => {
                   Over the years, we've grown to become one of the most trusted healthcare providers in Delhi NCR...
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-medical-primary hover:bg-medical-dark text-white">
-                    <Phone className="w-5 h-5 mr-2" />
-                    Contact Us
-                  </Button>
+                  <CallButton
+                    label="Call Now"
+                    className="bg-medical-primary hover:bg-medical-dark text-white h-10 px-4 text-sm rounded-md shadow-md justify-center"
+                  />
+
                   <WhatsAppButton text="Chat with Us" />
                 </div>
               </div>

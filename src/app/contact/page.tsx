@@ -43,7 +43,7 @@ const Contact = () => {
             <div className="text-center mb-8">
               <h1 className="text-4xl font-bold text-medical-dark mb-4">Contact Us</h1>
               <p className="text-gray-700 max-w-2xl mx-auto">
-                Have questions about our services? Need to schedule a consultation? Our team is here to help you with any inquiries about Swasthya Health.
+                We're here to answer your questions and help you on your journey to better vision.
               </p>
             </div>
           </div>
@@ -70,6 +70,9 @@ const Contact = () => {
                           placeholder="Enter your full name"
                         />
                       </div>
+                      
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                       <div>
                         <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email Address</label>
                         <input
@@ -84,7 +87,6 @@ const Contact = () => {
                         />
                       </div>
                     </div>
-                    
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                       <div>
                         <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">Phone Number</label>
@@ -98,7 +100,7 @@ const Contact = () => {
                           placeholder="Enter your phone number"
                         />
                       </div>
-                      <div>
+                      {/* <div>
                         <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">Subject</label>
                         <select
                           id="subject"
@@ -115,10 +117,10 @@ const Contact = () => {
                           <option value="partnership">Partnership Opportunities</option>
                           <option value="other">Other</option>
                         </select>
-                      </div>
+                      </div> */}
                     </div>
                     
-                    <div className="mb-6">
+                    {/* <div className="mb-6">
                       <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Your Message</label>
                       <textarea
                         id="message"
@@ -130,13 +132,13 @@ const Contact = () => {
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-medical-primary focus:border-medical-primary"
                         placeholder="How can we help you?"
                       ></textarea>
-                    </div>
+                    </div> */}
                     
                     <Button 
                       type="submit" 
                       className="bg-medical-primary hover:bg-medical-dark text-white px-8 py-3 rounded-lg shadow-md hover:shadow-lg transition-all"
                     >
-                      Send Message
+                      Connect To Expert
                     </Button>
                   </form>
                 </div>
@@ -147,22 +149,22 @@ const Contact = () => {
                   <h3 className="text-xl font-bold text-medical-dark mb-4">Our Locations</h3>
                   <div className="space-y-6">
                     <div>
-                      <h4 className="font-medium text-medical-primary mb-2">Delhi Main Center</h4>
+                      {/* <h4 className="font-medium text-medical-primary mb-2">Delhi Main Center</h4> */}
                       <div className="flex items-start mb-2">
                         <MapPin className="w-5 h-5 text-medical-primary mt-1 mr-2 flex-shrink-0" />
-                        <span className="text-gray-700">123 Healthcare Avenue, Connaught Place, New Delhi - 110001</span>
+                        <span className="text-gray-700">Delhi NCR</span>
                       </div>
                       <div className="flex items-center mb-2">
                         <Phone className="w-5 h-5 text-medical-primary mr-2 flex-shrink-0" />
-                        <span className="text-gray-700">+91-11-12345678</span>
+                        <span className="text-gray-700">+91 9818996967</span>
                       </div>
                       <div className="flex items-center">
                         <Clock className="w-5 h-5 text-medical-primary mr-2 flex-shrink-0" />
-                        <span className="text-gray-700">Mon-Sat: 9:00 AM - 8:00 PM</span>
+                        <span className="text-gray-700">We'll respond within 24 hours</span>
                       </div>
                     </div>
                     
-                    <div>
+                    {/* <div>
                       <h4 className="font-medium text-medical-primary mb-2">Gurgaon Center</h4>
                       <div className="flex items-start mb-2">
                         <MapPin className="w-5 h-5 text-medical-primary mt-1 mr-2 flex-shrink-0" />
@@ -176,7 +178,7 @@ const Contact = () => {
                         <Clock className="w-5 h-5 text-medical-primary mr-2 flex-shrink-0" />
                         <span className="text-gray-700">Mon-Sat: 10:00 AM - 7:00 PM</span>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 
@@ -185,15 +187,15 @@ const Contact = () => {
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <Mail className="w-5 h-5 text-medical-primary mr-3" />
-                      <span className="text-gray-700">info@swasthyahealth.com</span>
+                      <span className="text-gray-700">eyeopexperts@gmail.com</span>
                     </div>
                     <div className="flex items-center">
                       <Phone className="w-5 h-5 text-medical-primary mr-3" />
-                      <span className="text-gray-700">+91-9876543210 (Helpline)</span>
+                      <span className="text-gray-700">+91 9818996967</span>
                     </div>
                     <div className="flex items-center">
                       <MessageCircle className="w-5 h-5 text-medical-primary mr-3" />
-                      <span className="text-gray-700">WhatsApp: +91-9876543210</span>
+                      <span className="text-gray-700">WhatsApp: +91 9818996967</span>
                     </div>
                   </div>
                   
@@ -201,7 +203,7 @@ const Contact = () => {
                     <Button 
                       className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-medium shadow-md hover:shadow-lg"
                       onClick={() => {
-                        const whatsappUrl = `https://wa.me/919876543210?text=I'd like to know more about Swasthya Health services`;
+                        const whatsappUrl = `https://wa.me/9818996967?text=I'd like to know more about Swasthya Health services`;
                         window.open(whatsappUrl, '_blank');
                       }}
                     >

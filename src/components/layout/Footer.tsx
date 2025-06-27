@@ -25,6 +25,8 @@ const Footer = () => {
     { name: "Contact Us", path: "/contact" },
     { name: "Privacy Policy", path: "/privacy-policy" },
     { name: "Terms & Conditions", path: "/terms" },
+    {name:"Admin Login", path:"/admin-login"}
+    
   ];
 
   return (
@@ -88,25 +90,24 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 mt-0.5 mr-2 text-medical-accent" />
                 <span className="text-gray-300">
-                  123 Medical Center Road,<br />
-                  Sector 10, Delhi NCR - 110001
+                  Delhi NCR
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 mr-2 text-medical-accent" />
-                <a href="tel:+919876543210" className="text-gray-300 hover:text-white">
-                  +91 98765 43210
+                <a href="tel:+91 9818996967" className="text-gray-300 hover:text-white">
+                  +91 9818996967
                 </a>
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 mr-2 text-medical-accent" />
-                <a href="mailto:info@mediconsultdelhi.com" className="text-gray-300 hover:text-white">
-                  info@mediconsultdelhi.com
+                <a href="mailto:eyeopexperts@gmail.com" className="text-gray-300 hover:text-white">
+                  eyeopexperts@gmail.com
                 </a>
               </li>
               <li className="flex items-center">
                 <Clock className="w-5 h-5 mr-2 text-medical-accent" />
-                <span className="text-gray-300">Mon - Sat: 9am - 8pm</span>
+                <span className="text-gray-300">We'll respond within 24 hours</span>
               </li>
             </ul>
           </div>
