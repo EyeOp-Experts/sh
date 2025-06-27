@@ -56,7 +56,7 @@ const Contact = () => {
                 <div className="bg-white rounded-xl shadow-md p-8">
                   <h2 className="text-2xl font-bold text-medical-dark mb-6">Send Us a Message</h2>
                   <form onSubmit={handleSubmit}>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                    <div className="flex flex-col gap-6 mb-6">
                       <div>
                         <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Your Name</label>
                         <input
@@ -70,9 +70,6 @@ const Contact = () => {
                           placeholder="Enter your full name"
                         />
                       </div>
-                      
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                       <div>
                         <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email Address</label>
                         <input
@@ -86,8 +83,6 @@ const Contact = () => {
                           placeholder="Enter your email"
                         />
                       </div>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                       <div>
                         <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">Phone Number</label>
                         <input
@@ -100,40 +95,7 @@ const Contact = () => {
                           placeholder="Enter your phone number"
                         />
                       </div>
-                      {/* <div>
-                        <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">Subject</label>
-                        <select
-                          id="subject"
-                          name="subject"
-                          value={formData.subject}
-                          onChange={handleChange}
-                          required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-medical-primary focus:border-medical-primary"
-                        >
-                          <option value="">Select a subject</option>
-                          <option value="consultation">Book a Consultation</option>
-                          <option value="inquiry">General Inquiry</option>
-                          <option value="feedback">Feedback</option>
-                          <option value="partnership">Partnership Opportunities</option>
-                          <option value="other">Other</option>
-                        </select>
-                      </div> */}
                     </div>
-                    
-                    {/* <div className="mb-6">
-                      <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Your Message</label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                        rows={5}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-medical-primary focus:border-medical-primary"
-                        placeholder="How can we help you?"
-                      ></textarea>
-                    </div> */}
-                    
                     <Button 
                       type="submit" 
                       className="bg-medical-primary hover:bg-medical-dark text-white px-8 py-3 rounded-lg shadow-md hover:shadow-lg transition-all"
