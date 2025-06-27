@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -15,19 +16,21 @@ import {
 import { ArrowRight, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import CallButton from "@/components/ui/CallButton";
+import WhatsAppButton from "@/components/ui/button-whatsapp";
 
-export const metadata: Metadata = {
-  title: "Medical Specialties | Swasthya Health",
-  description: "Explore our wide range of surgical specialties including orthopedics, eye surgery, cancer surgery, and gynecology. Find expert surgeons and affordable treatment options.",
-  keywords: "medical specialties, orthopedic surgery, eye surgery, cancer surgery, gynecology, hysteroscopy, affordable surgery, expert surgeons",
-  openGraph: {
-    title: "Medical Specialties | Swasthya Health",
-    description: "Explore surgical specialties like orthopedics, eye surgery, cancer surgery, and gynecology with expert surgeons and affordable options.",
-    type: "website",
-    url: "https://swasthyahealth.com/specialties",
-    images: [{ url: "https://swasthyahealth.com/assets/og-specialties.jpg" }],
-  },
-};
+// export const metadata: Metadata = {
+//   title: "Medical Specialties | Swasthya Health",
+//   description: "Explore our wide range of surgical specialties including orthopedics, eye surgery, cancer surgery, and gynecology. Find expert surgeons and affordable treatment options.",
+//   keywords: "medical specialties, orthopedic surgery, eye surgery, cancer surgery, gynecology, hysteroscopy, affordable surgery, expert surgeons",
+//   openGraph: {
+//     title: "Medical Specialties | Swasthya Health",
+//     description: "Explore surgical specialties like orthopedics, eye surgery, cancer surgery, and gynecology with expert surgeons and affordable options.",
+//     type: "website",
+//     url: "https://swasthyahealth.com/specialties",
+//     images: [{ url: "https://swasthyahealth.com/assets/og-specialties.jpg" }],
+//   },
+// };
 
 const specialties = [
   {
@@ -100,12 +103,12 @@ export default function Specialties() {
             <h2 className="text-2xl font-bold text-medical-dark mb-6">Our Medical Specialties</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {specialties.map((specialty) => (
-                <Card key={specialty.id} className="overflow-hidden hover:shadow-md transition-shadow group">
-                  <div className="relative h-48 overflow-hidden">
+                <Card key={specialty.id} className="overflow-hidden hover:shadow-md transition-shadow group flex flex-col">
+                  <div className="relative flex-1 min-h-0 h-56 overflow-hidden flex">
                     <img 
                       src={specialty.image} 
                       alt={specialty.name} 
-                      className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105 flex-1"
                     />
                     <div className="absolute top-4 right-4 bg-white rounded-full p-2 shadow-md">
                       <img src={specialty.iconSrc} alt="" className="w-6 h-6" />
@@ -183,10 +186,12 @@ export default function Specialties() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button className="btn-primary">Book a Consultation</Button>
-                <Button variant="outline" className="border-medical-primary text-medical-primary hover:bg-medical-light">
-                  Call Helpline
-                </Button>
+              <CallButton
+                    label="Call Now"
+                    className="bg-medical-primary hover:bg-medical-dark text-white h-10 px-4 text-sm rounded-md shadow-md justify-center"
+                  />
+
+                  <WhatsAppButton text="Chat with Us" />
               </div>
             </div>
           </div>

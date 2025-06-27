@@ -58,7 +58,7 @@ const SurgeryPageLayout = ({
               <img 
                 src={surgeryData.image} 
                 alt={surgeryData.title} 
-                className="w-full h-64 object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="p-6 md:w-2/3">

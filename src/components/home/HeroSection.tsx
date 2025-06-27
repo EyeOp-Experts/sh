@@ -51,30 +51,30 @@ const HeroSection = () => {
           </div>
 
           {/* RIGHT SIDE IMAGE */}
-          <div className="relative">
-            <div className="relative z-10 bg-white p-3 rounded-2xl shadow-2xl transform hover:scale-[1.01] transition-all">
+          <div className="relative flex justify-center items-center">
+            <div className="relative z-10 bg-white p-3 rounded-2xl shadow-2xl transform hover:scale-[1.01] transition-all w-[350px] h-[350px] md:w-[450px] md:h-[450px]">
               <img
                 src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2342&q=80"
                 alt="Doctor consulting with patient"
-                className="w-full h-5/10 rounded-xl object-cover"
+                className="w-full h-full rounded-xl object-cover"
               />
-              <div className="absolute bottom-8 right-8 bg-white p-4 rounded-xl shadow-lg">
+              <div className="absolute bottom-4 right-4 bg-white p-3 rounded-xl shadow-lg">
                 <div className="flex items-center gap-3">
                   <div className="bg-medical-primary rounded-full p-3">
-                    <Phone className="w-6 h-6 text-white" />
+                    <Phone className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <p className="text-xs text-gray-500">Need help? Call us</p>
-                    <p className="text-medical-dark font-bold">+91 9818996967</p>
+                    <p className="text-medical-dark font-bold text-sm">+91 9818996967</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Decorative Elements */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-medical-accent rounded-full opacity-20 z-0"></div>
-            <div className="absolute -top-6 -left-6 w-24 h-24 bg-medical-primary rounded-full opacity-20 z-0"></div>
-            <div className="absolute top-1/2 -right-4 w-8 h-8 bg-medical-success rounded-full opacity-60 z-0"></div>
+            <div className="absolute -bottom-8 -right-8 w-24 h-24 md:w-32 md:h-32 bg-medical-accent rounded-full opacity-20 z-0"></div>
+            <div className="absolute -top-8 -left-8 w-16 h-16 md:w-24 md:h-24 bg-medical-primary rounded-full opacity-20 z-0"></div>
+            <div className="absolute top-1/2 -right-6 w-6 h-6 md:w-8 md:h-8 bg-medical-success rounded-full opacity-60 z-0"></div>
           </div>
         </div>
 
