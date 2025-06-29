@@ -1,0 +1,1 @@
+export const CALL_MOBILE_NO = "+919818996967"
