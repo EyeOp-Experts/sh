@@ -54,7 +54,7 @@ const AddBlogPage = () => {
       }
       formData.append("metaTags", JSON.stringify(metaTags)); // send tags as JSON string
 
-      const response = await axios.post("http://localhost:5000/api/blogs", formData, {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_BASE_URL}\blogs`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
