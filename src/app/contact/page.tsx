@@ -179,7 +179,7 @@ const Contact = () => {
           </div>
         </section>
         
-        <section className="py-12 bg-gray-50">
+        {/* <section className="py-12 bg-gray-50">
           <div className="content-container">
             <div className="bg-white rounded-xl shadow-md overflow-hidden">
               <iframe 
@@ -193,7 +193,7 @@ const Contact = () => {
               ></iframe>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
       <WhatsAppFloat />
