@@ -17,8 +17,8 @@ interface BlogPost {
   __v: number;
 }
 
-export default async function BlogDetailPage({ params }: { params: { id: string } }) {
-  const { id } = params;
+export default async function BlogDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
 
   let blog: BlogPost;
 
