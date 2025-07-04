@@ -64,9 +64,9 @@ const TestimonialCard = ({ testimonial }: { testimonial: TestimonialProps }) => 
             <Image
               src={testimonial.imageSrc}
               alt={testimonial.name}
-              layout="fill"
-              objectFit="cover"
-              priority={false}
+              fill
+              style={{ objectFit: "cover" }}
+              sizes="48px"
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-medical-light">

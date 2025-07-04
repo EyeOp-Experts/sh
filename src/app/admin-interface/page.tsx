@@ -41,6 +41,12 @@ const AdminInterface = () => {
         >
           Add Customer Feedback
         </button>
+        <button
+          onClick={() => router.push("/view-feedbacks")}
+          className="w-full bg-blue-100 hover:bg-blue-200 text-blue-800 py-3 rounded-lg text-lg font-semibold transition"
+        >
+          View Feedbacks
+        </button>
       </div>
     </div>
   );

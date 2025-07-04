@@ -6,11 +6,17 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFloat from "@/components/layout/WhatsAppFloat";
 
+interface Section {
+  sectionTitle: string;
+  sectionContent: string;
+  order: number;
+}
+
 interface BlogPost {
   _id: string;
   title: string;
   description: string;
-  content: string;
+  sections: Section[];
   thumbnailUrl: string;
   metaTags: string[];
   createdAt: string;
@@ -49,6 +55,58 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ id:
   const getCategory = (metaTags: string[]) => {
     return metaTags && metaTags.length > 0 ? metaTags[0] : "General";
   };
+
+  // Render section content with bullet point support
+  const renderSectionContent = (content: string) => {
+    // Split content by lines to handle bullet points
+    const lines = content.split('\n');
+    
+    return (
+      <div className="space-y-3">
+        {lines.map((line, index) => {
+          const trimmedLine = line.trim();
+          
+          // Check if line starts with bullet point indicators
+          if (trimmedLine.startsWith('•') || trimmedLine.startsWith('-') || trimmedLine.startsWith('*')) {
+            return (
+              <div key={index} className="flex items-start">
+                <span className="text-medical-primary mr-2 mt-1">•</span>
+                <span className="text-gray-700">{trimmedLine.substring(1).trim()}</span>
+              </div>
+            );
+          }
+          
+          // Check if line starts with numbered list
+          if (/^\d+\./.test(trimmedLine)) {
+            const match = trimmedLine.match(/^(\d+)\.\s*(.*)/);
+            if (match) {
+              return (
+                <div key={index} className="flex items-start">
+                  <span className="text-medical-primary mr-2 mt-1 font-medium">{match[1]}.</span>
+                  <span className="text-gray-700">{match[2]}</span>
+                </div>
+              );
+            }
+          }
+          
+          // Regular paragraph
+          if (trimmedLine) {
+            return (
+              <p key={index} className="text-gray-700 leading-relaxed">
+                {trimmedLine}
+              </p>
+            );
+          }
+          
+          // Empty line
+          return <div key={index} className="h-3"></div>;
+        })}
+      </div>
+    );
+  };
+
+  // Sort sections by order
+  const sortedSections = blog.sections?.sort((a, b) => a.order - b.order) || [];
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -97,14 +155,22 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ id:
             </p>
           )}
 
-          {/* Blog Content */}
-          {blog.content ? (
-            <div
-              className="prose prose-lg max-w-none text-gray-800"
-              dangerouslySetInnerHTML={{ __html: blog.content }}
-            />
+          {/* Blog Sections */}
+          {sortedSections.length > 0 ? (
+            <div className="space-y-8">
+              {sortedSections.map((section, index) => (
+                <section key={index} className="bg-white rounded-lg p-6 shadow-sm">
+                  <h2 className="text-xl font-semibold text-medical-dark mb-4">
+                    {section.sectionTitle}
+                  </h2>
+                  <div className="text-gray-700">
+                    {renderSectionContent(section.sectionContent)}
+                  </div>
+                </section>
+              ))}
+            </div>
           ) : (
-            <div className="text-gray-500 italic">
+            <div className="text-gray-500 italic bg-white rounded-lg p-6 shadow-sm">
               No content available for this blog post.
             </div>
           )}
